@@ -53,7 +53,7 @@
 ![Dashboard Kategori](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20155125.png)
 
 ### 8. Dokumentasi Berita
-![Berita 1](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20185522.png)
+![Berita 1](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20211322.png)
 ![Berita 2](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20192554.png)
 ![Berita 3](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20192623.png)
 ![Berita 4](https://github.com/berlinmrsyh/blog_laravel/blob/main/images/Screenshot%202024-06-16%20192750.png)
