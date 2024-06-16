@@ -4,7 +4,7 @@
     <div class="col-lg-4 mb-3">
         <div class="card bg-light rounded-4 shadow border-0">
             <a href="{{ route('posts.show', ['slug' => $relatedPosts->slug]) }}">
-                @if ($relatedPosts->image && Storage::exists('images/posts/' . $relatedPosts->image))
+                @if ($relatedPosts->image && Storage::exists('public/images/posts/' . $relatedPosts->image))
                 <img src="{{ asset('storage/images/posts/' . $relatedPosts->image) }}" class="card-img-top">
                 @else
                 <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">

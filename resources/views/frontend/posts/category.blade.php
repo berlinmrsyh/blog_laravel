@@ -17,12 +17,13 @@
                     @foreach ($post_category as $postCategory)
                     <div class="col-lg-6">
                         <div class="card border-0 bg-light rounded-4">
-                            @if ($postCategory->image && Storage::exists('images/posts/' . $postCategory->image))
-                            <img src="{{ asset('storage/images/posts/' . $postCategory->image) }}" class="card-img-top">
-                            @else
-                            <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
-                            @endif
-
+                            <a href="{{ route('posts.show', ['slug' => $postCategory->slug]) }}">
+                                @if ($postCategory->image && Storage::exists('public/images/posts/' . $postCategory->image))
+                                <img src="{{ Storage::url('images/posts/' . $postCategory->image) }}" class="card-img-top">
+                                @else
+                                <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
+                                @endif
+                            </a>
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="{{ route('posts.show', ['slug' => $postCategory->slug]) }}" class="text-decoration-none">
@@ -46,10 +47,8 @@
                     </div>
                     @endforeach
                 </div>
-
                 {{ $post_category->links() }}
             </div>
-
             <div class="col-lg-4">
                 @include('frontend.layouts.sidebar')
             </div>

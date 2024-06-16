@@ -17,11 +17,13 @@
                     @foreach ($post_archive as $postArchive)
                     <div class="col-lg-6">
                         <div class="card border-0 bg-light rounded-4">
-                            @if ($postArchive->image && Storage::exists('images/posts/' . $postArchive->image))
-                            <img src="{{ asset('storage/images/posts/' . $postArchive->image) }}" class="card-img-top">
-                            @else
-                            <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
-                            @endif
+                            <a href="{{ route('posts.show', ['slug' => $postArchive->slug]) }}">
+                                @if ($postArchive->image && Storage::exists('public/images/posts/' . $postArchive->image))
+                                <img src="{{ Storage::url('images/posts/' . $postArchive->image) }}" class="card-img-top">
+                                @else
+                                <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
+                                @endif
+                            </a>
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="{{ route('posts.show', ['slug' => $postArchive->slug]) }}" class="text-decoration-none">
@@ -45,10 +47,8 @@
                     </div>
                     @endforeach
                 </div>
-
                 {{ $post_archive->links() }}
             </div>
-
             <div class="col-lg-4">
                 @include('frontend.layouts.sidebar')
             </div>

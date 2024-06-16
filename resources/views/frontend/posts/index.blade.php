@@ -18,8 +18,8 @@
                     <div class="col">
                         <div class="card border-0 bg-light-subtle rounded-3 shadow">
                             <a href="{{ route('posts.show', ['slug' => $latestPost->slug]) }}">
-                                @if ($latestPost->image && Storage::exists('images/posts/' . $latestPost->image))
-                                <img src="{{ asset('storage/images/posts/' . $latestPost->image) }}" class="card-img-top">
+                                @if ($latestPost->image && Storage::exists('public/images/posts/' . $latestPost->image))
+                                <img src="{{ Storage::url('images/posts/' . $latestPost->image) }}" class="card-img-top">
                                 @else
                                 <img src="{{ asset('storage/images/no-image.jpg') }}" class="card-img-top">
                                 @endif
@@ -47,10 +47,8 @@
                     </div>
                     @endforeach
                 </div>
-
                 {{ $latest_posts->links() }}
             </div>
-
             <div class="col-lg-4">
                 @include('frontend.layouts.sidebar')
             </div>
