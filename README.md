@@ -31,4 +31,4 @@
 
 # Preview Tampilan Website:
 
-![Screenshot](public/images/screenshot.png)
+![Screenshot]([main/images/Screenshot%202024-06-15%20235332.png])
